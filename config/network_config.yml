@@ -1,0 +1,20 @@
+network:
+  name: labnet
+  subnet: 192.168.100.0/24
+
+devices:
+  - name: pc1
+    hostname: pc1
+    username: alice
+    ip: 192.168.100.10
+    type: workstation
+    behaviors:
+      - type: ping
+        interval: 5
+        target: 8.8.8.8
+
+  - name: pc2
+    hostname: pc2
+    username: bob
+    ip: "192.168.100.11"
+    type: workstation

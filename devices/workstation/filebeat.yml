@@ -1,0 +1,9 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/syslog
+      - /var/log/behavior.log
+
+output.logstash:
+  hosts: ["elk:5044"]
