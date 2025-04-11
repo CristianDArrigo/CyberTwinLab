@@ -5,7 +5,7 @@ import yaml
 
 
 # Immaginiamo di avere già la funzione load_config definita
-def load_config(path: str = "../config/network_config.yml") -> FullConfig:
+def load_config(path: str = "config/network_config.yml") -> FullConfig:
     with open(path, "r") as f:
         raw = yaml.safe_load(f)
     return FullConfig(**raw)
